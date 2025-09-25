@@ -19,17 +19,17 @@
     /* Default background color for all table cells */
     .timetable-table th,
     .timetable-table td {
-        background-color: #ccfff2;
-        border-color: #e8ccff;
-        border-width: 5px;
+      background-color: #ccfff2;
+      border-color: #e8ccff;
+      border-width: 5px;
     }
     /* Highlight color for the current day and time slot */
     .highlight-day-time {
-        background-color: #e8ccff !important;
+      background-color: #e8ccff !important;
     }
     /* Highlight color for the current class cell */
     .highlight-cell {
-        background-color: #e8ccff !important;
+      background-color: #e8ccff !important;
     }
   </style>
 </head>
@@ -49,73 +49,79 @@
     </div>
 
     <!-- Timetable Container -->
-    <div class="overflow-x-auto bg-white rounded-lg shadow-sm border-gray-200">
+    <div class="bg-white rounded-lg shadow-sm border-gray-200">
       <!-- Added 'timetable-table' class to apply custom colors -->
       <table class="timetable-table w-full text-center text-xs sm:text-sm md:text-base border-collapse">
         <thead>
           <tr>
-            <th class="p-3 w-24">Time</th>
-            <th data-day="1" class="p-3">Monday</th>
-            <th data-day="2" class="p-3">Tuesday</th>
-            <th data-day="3" class="p-3">Wednesday</th>
-            <th data-day="4" class="p-3">Thursday</th>
-            <th data-day="5" class="p-3">Friday</th>
-            <th data-day="6" class="p-3">Saturday</th>
+            <th class="px-1 py-2 sm:p-3 w-20 sm:w-24">Time</th>
+            <th data-day="1" class="px-1 py-2 sm:p-3">Monday</th>
+            <th data-day="2" class="px-1 py-2 sm:p-3">Tuesday</th>
+            <th data-day="3" class="px-1 py-2 sm:p-3">Wednesday</th>
+            <th data-day="4" class="px-1 py-2 sm:p-3">Thursday</th>
+            <th data-day="5" class="px-1 py-2 sm:p-3">Friday</th>
+            <th data-day="6" class="px-1 py-2 sm:p-3">Saturday</th>
           </tr>
         </thead>
         <tbody>
           <!-- Time Slot 1: 08:00 - 10:00 -->
           <tr>
-            <th data-slot="t1" class="p-3 font-medium">08:00 - 10:00</th>
-            <td data-day="1" data-slot="t1" class="p-3">Android Practical<br>[Batch B-1]</td>
-            <td data-day="2" data-slot="t1" class="p-3">Android Practical<br>[Batch B-2]</td>
-            <td data-day="3" data-slot="t1" class="p-3">Web Design Practical<br>[Batch B-1]</td>
-            <td data-day="4" data-slot="t1" class="p-3">Web Design Practical<br>[Batch B-2]</td>
-            <td data-day="5" data-slot="t1" class="p-3">Project</td>
-            <td data-day="6" data-slot="t1" class="p-3">Project</td>
+            <th data-slot="t1" class="px-1 py-2 sm:p-3 font-medium">08:00 - 10:00</th>
+            <td data-day="1" data-slot="t1" class="px-1 py-2 sm:p-3">Android Prac.<br>[Batch B-1]</td>
+            <td data-day="2" data-slot="t1" class="px-1 py-2 sm:p-3">Android Prac.<br>[Batch B-2]</td>
+            <td data-day="3" data-slot="t1" class="px-1 py-2 sm:p-3">Web Design Prac.<br>[Batch B-1]</td>
+            <td data-day="4" data-slot="t1" class="px-1 py-2 sm:p-3">Web Design Prac.<br>[Batch B-2]</td>
+            <td data-day="5" data-slot="t1" class="px-1 py-2 sm:p-3">Project</td>
+            <td data-day="6" data-slot="t1" class="px-1 py-2 sm:p-3">Project</td>
           </tr>
           <!-- Time Slot 2: 12:00 - 12:45 -->
           <tr>
-            <th data-slot="t2" class="p-3 font-medium">12:00 - 12:45</th>
-            <td data-day="1" data-slot="t2" class="p-3">Android</td>
-            <td data-day="2" data-slot="t2" class="p-3">Android</td>
-            <td data-day="3" data-slot="t2" class="p-3">Entrepreneurship Dev.</td>
-            <td data-day="4" data-slot="t2" class="p-3">Entrepreneurship Dev.</td>
-            <td data-day="5" data-slot="t2" class="p-3">Entrepreneurship Dev.</td>
-            <td data-day="6" data-slot="t2" class="p-3">Entrepreneurship Dev.</td>
+            <th data-slot="t2" class="px-1 py-2 sm:p-3 font-medium">12:00 - 12:45</th>
+            <td data-day="1" data-slot="t2" class="px-1 py-2 sm:p-3">Android</td>
+            <td data-day="2" data-slot="t2" class="px-1 py-2 sm:p-3">Android</td>
+            <td data-day="3" data-slot="t2" class="px-1 py-2 sm:p-3">Entrep. Dev.</td>
+            <td data-day="4" data-slot="t2" class="px-1 py-2 sm:p-3">Entrep. Dev.</td>
+            <td data-day="5" data-slot="t2" class="px-1 py-2 sm:p-3">Entrep. Dev.</td>
+            <td data-day="6" data-slot="t2" class="px-1 py-2 sm:p-3">Entrep. Dev.</td>
           </tr>
           <!-- Time Slot 3: 12:45 - 01:30 -->
           <tr>
-            <th data-slot="t3" class="p-3 font-medium">12:45 - 01:30</th>
-            <td data-day="1" data-slot="t3" class="p-3">Node.JS / React.js</td>
-            <td data-day="2" data-slot="t3" class="p-3">Node.JS / React.js</td>
-            <td data-day="3" data-slot="t3" class="p-3">Cyber Security</td>
-            <td data-day="4" data-slot="t3" class="p-3">Cyber Security</td>
-            <td data-day="5" data-slot="t3" class="p-3">Cyber Security</td>
-            <td data-day="6" data-slot="t3" class="p-3">Cyber Security</td>
+            <th data-slot="t3" class="px-1 py-2 sm:p-3 font-medium">12:45 - 01:30</th>
+            <td data-day="1" data-slot="t3" class="px-1 py-2 sm:p-3">Node/React</td>
+            <td data-day="2" data-slot="t3" class="px-1 py-2 sm:p-3">Node/React</td>
+            <td data-day="3" data-slot="t3" class="px-1 py-2 sm:p-3">Cyber Sec.</td>
+            <td data-day="4" data-slot="t3" class="px-1 py-2 sm:p-3">Cyber Sec.</td>
+            <td data-day="5" data-slot="t3" class="px-1 py-2 sm:p-3">Cyber Sec.</td>
+            <td data-day="6" data-slot="t3" class="px-1 py-2 sm:p-3">Cyber Sec.</td>
           </tr>
           <!-- Time Slot 4: 01:30 - 02:15 -->
           <tr>
-            <th data-slot="t4" class="p-3 font-medium">01:30 - 02:15</th>
-            <td data-day="1" data-slot="t4" class="p-3 text-gray-400">---</td>
-            <td data-day="2" data-slot="t4" class="p-3 text-gray-400">---</td>
-            <td data-day="3" data-slot="t4" class="p-3">Android</td>
-            <td data-day="4" data-slot="t4" class="p-3">Android</td>
-            <td data-day="5" data-slot="t4" class="p-3">Node.JS / React.js</td>
-            <td data-day="6" data-slot="t4" class="p-3">Node.JS / React.js</td>
+            <th data-slot="t4" class="px-1 py-2 sm:p-3 font-medium">01:30 - 02:15</th>
+            <td data-day="1" data-slot="t4" class="px-1 py-2 sm:p-3 text-gray-400">---</td>
+            <td data-day="2" data-slot="t4" class="px-1 py-2 sm:p-3 text-gray-400">---</td>
+            <td data-day="3" data-slot="t4" class="px-1 py-2 sm:p-3">Android</td>
+            <td data-day="4" data-slot="t4" class="px-1 py-2 sm:p-3">Android</td>
+            <td data-day="5" data-slot="t4" class="px-1 py-2 sm:p-3">Node/React</td>
+            <td data-day="6" data-slot="t4" class="px-1 py-2 sm:p-3">Node/React</td>
           </tr>
           <!-- Time Slot 5: 02:30 - 04:00 -->
           <tr>
-            <th data-slot="t5" class="p-3 font-medium">02:30 - 04:00</th>
-            <td data-day="1" data-slot="t5" class="p-3">Android Practical<br>[Batch B-2]</td>
-            <td data-day="2" data-slot="t5" class="p-3">Android Practical<br>[Batch B-1]</td>
-            <td data-day="3" data-slot="t5" class="p-3">Web Design Practical<br>[Batch B-2]</td>
-            <td data-day="4" data-slot="t5" class="p-3">Web Design Practical<br>[Batch B-1]</td>
-            <td data-day="5" data-slot="t5" class="p-3">Project</td>
-            <td data-day="6" data-slot="t5" class="p-3">Project</td>
+            <th data-slot="t5" class="px-1 py-2 sm:p-3 font-medium">02:30 - 04:00</th>
+            <td data-day="1" data-slot="t5" class="px-1 py-2 sm:p-3">Android Prac.<br>[Batch B-2]</td>
+            <td data-day="2" data-slot="t5" class="px-1 py-2 sm:p-3">Android Prac.<br>[Batch B-1]</td>
+            <td data-day="3" data-slot="t5" class="px-1 py-2 sm:p-3">Web Design Prac.<br>[Batch B-2]</td>
+            <td data-day="4" data-slot="t5" class="px-1 py-2 sm:p-3">Web Design Prac.<br>[Batch B-1]</td>
+            <td data-day="5" data-slot="t5" class="px-1 py-2 sm:p-3">Project</td>
+            <td data-day="6" data-slot="t5" class="px-1 py-2 sm:p-3">Project</td>
           </tr>
         </tbody>
       </table>
+    </div>
+
+    <div class="mt-4">
+      <a href="https://github.com/jagushinde74/dtt/blob/main/code.html" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-800 underline">
+        Click here for code
+      </a>
     </div>
   </div>
 
@@ -184,7 +190,6 @@
 </body>
 
 </html>
-
 
 
 

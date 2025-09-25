@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Timetable</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+    /* --- USER'S CUSTOM COLORS --- */
+    /* Default background color for all table cells */
+    .timetable-table th,
+    .timetable-table td {
+        background-color: #ccfff2;
+        border-color: #e8ccff;
+        border-width: 5px;
+    }
+    /* Highlight color for the current day and time slot */
+    .highlight-day-time {
+        background-color: #e8ccff !important;
+    }
+    /* Highlight color for the current class cell */
+    .highlight-cell {
+        background-color: #e8ccff !important;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 p-4 md:p-8">
+
+  <div class="max-w-7xl mx-auto">
+    <!-- Header Information -->
+    <div class="mb-6 bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+      <h1 class="text-xl md:text-2xl font-bold text-[teal]">BCA SEM_6 TIMETABLE DIV_A</h1>
+      <p class="text-xs text-gray-500 mt-1">
+        Version 3.6.17 (Last Updated: 20/01/2025)
+      </p>
+      <p class="text-xs text-gray-400 mt-2">
+        <span class="font-semibold">Info:</span> The first number represents the student year, the second is the semester, third shows how many times it gets modified, if the any normal or major modification was did in code then the last number gets increase by 1.
+      </p>
+    </div>
+
+    <!-- Timetable Container -->
+    <div class="overflow-x-auto bg-white rounded-lg shadow-sm border-gray-200">
+      <!-- Added 'timetable-table' class to apply custom colors -->
+      <table class="timetable-table w-full text-center text-xs sm:text-sm md:text-base border-collapse">
+        <thead>
+          <tr>
+            <th class="p-3 border border-teal-200 w-24">Time</th>
+            <th data-day="1" class="p-3 border border-teal-200">Monday</th>
+            <th data-day="2" class="p-3 border border-teal-200">Tuesday</th>
+            <th data-day="3" class="p-3 border border-teal-200">Wednesday</th>
+            <th data-day="4" class="p-3 border border-teal-200">Thursday</th>
+            <th data-day="5" class="p-3 border border-teal-200">Friday</th>
+            <th data-day="6" class="p-3 border border-teal-200">Saturday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Time Slot 1: 08:00 - 10:00 -->
+          <tr>
+            <th data-slot="t1" class="p-3 border border-gray-200 font-medium">08:00 - 10:00</th>
+            <td data-day="1" data-slot="t1" class="p-3 border border-gray-200">Android Practical<br>[Batch B-1]</td>
+            <td data-day="2" data-slot="t1" class="p-3 border border-gray-200">Android Practical<br>[Batch B-2]</td>
+            <td data-day="3" data-slot="t1" class="p-3 border border-gray-200">Web Design Practical<br>[Batch B-1]</td>
+            <td data-day="4" data-slot="t1" class="p-3 border border-gray-200">Web Design Practical<br>[Batch B-2]</td>
+            <td data-day="5" data-slot="t1" class="p-3 border border-gray-200">Project</td>
+            <td data-day="6" data-slot="t1" class="p-3 border border-gray-200">Project</td>
+          </tr>
+          <!-- Time Slot 2: 12:00 - 12:45 -->
+          <tr>
+            <th data-slot="t2" class="p-3 border border-gray-200 font-medium">12:00 - 12:45</th>
+            <td data-day="1" data-slot="t2" class="p-3 border border-gray-200">Android</td>
+            <td data-day="2" data-slot="t2" class="p-3 border border-gray-200">Android</td>
+            <td data-day="3" data-slot="t2" class="p-3 border border-gray-200">Entrepreneurship Dev.</td>
+            <td data-day="4" data-slot="t2" class="p-3 border border-gray-200">Entrepreneurship Dev.</td>
+            <td data-day="5" data-slot="t2" class="p-3 border border-gray-200">Entrepreneurship Dev.</td>
+            <td data-day="6" data-slot="t2" class="p-3 border border-gray-200">Entrepreneurship Dev.</td>
+          </tr>
+          <!-- Time Slot 3: 12:45 - 01:30 -->
+          <tr>
+            <th data-slot="t3" class="p-3 border border-gray-200 font-medium">12:45 - 01:30</th>
+            <td data-day="1" data-slot="t3" class="p-3 border border-gray-200">Node.JS / React.js</td>
+            <td data-day="2" data-slot="t3" class="p-3 border border-gray-200">Node.JS / React.js</td>
+            <td data-day="3" data-slot="t3" class="p-3 border border-gray-200">Cyber Security</td>
+            <td data-day="4" data-slot="t3" class="p-3 border border-gray-200">Cyber Security</td>
+            <td data-day="5" data-slot="t3" class="p-3 border border-gray-200">Cyber Security</td>
+            <td data-day="6" data-slot="t3" class="p-3 border border-gray-200">Cyber Security</td>
+          </tr>
+          <!-- Time Slot 4: 01:30 - 02:15 -->
+          <tr>
+            <th data-slot="t4" class="p-3 border border-gray-200 font-medium">01:30 - 02:15</th>
+            <td data-day="1" data-slot="t4" class="p-3 border border-gray-200 text-gray-400">---</td>
+            <td data-day="2" data-slot="t4" class="p-3 border border-gray-200 text-gray-400">---</td>
+            <td data-day="3" data-slot="t4" class="p-3 border border-gray-200">Android</td>
+            <td data-day="4" data-slot="t4" class="p-3 border border-gray-200">Android</td>
+            <td data-day="5" data-slot="t4" class="p-3 border border-gray-200">Node.JS / React.js</td>
+            <td data-day="6" data-slot="t4" class="p-3 border border-gray-200">Node.JS / React.js</td>
+          </tr>
+          <!-- Time Slot 5: 02:30 - 04:00 -->
+          <tr>
+            <th data-slot="t5" class="p-3 border border-gray-200 font-medium">02:30 - 04:00</th>
+            <td data-day="1" data-slot="t5" class="p-3 border border-gray-200">Android Practical<br>[Batch B-2]</td>
+            <td data-day="2" data-slot="t5" class="p-3 border border-gray-200">Android Practical<br>[Batch B-1]</td>
+            <td data-day="3" data-slot="t5" class="p-3 border border-gray-200">Web Design Practical<br>[Batch B-2]</td>
+            <td data-day="4" data-slot="t5" class="p-3 border border-gray-200">Web Design Practical<br>[Batch B-1]</td>
+            <td data-day="5" data-slot="t5" class="p-3 border border-gray-200">Project</td>
+            <td data-day="6" data-slot="t5" class="p-3 border border-gray-200">Project</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function highlightCurrentTime() {
+      // --- CSS classes for highlighting (now using custom classes from <style> tag) ---
+      const highlightDayClass = 'highlight-day-time';
+      const highlightTimeClass = 'highlight-day-time';
+      const highlightCellClass = 'highlight-cell';
+
+      // --- Clear previous highlights ---
+      document.querySelectorAll('[data-day], [data-slot], td').forEach(el => {
+        el.classList.remove(highlightDayClass, highlightTimeClass, highlightCellClass);
+      });
+
+      // --- Get current time information ---
+      const now = new Date();
+      const day = now.getDay(); // 0=Sun, 1=Mon, ..., 6=Sat
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const currentTimeInMinutes = hours * 60 + minutes;
+
+      // --- Highlight current day header ---
+      if (day >= 1 && day <= 6) {
+        const dayHeader = document.querySelector(`th[data-day="${day}"]`);
+        if (dayHeader) {
+          dayHeader.classList.add(highlightDayClass);
+        }
+      }
+
+      // --- Determine the current time slot ---
+      let currentSlot = null;
+      if (currentTimeInMinutes >= 8 * 60 && currentTimeInMinutes < 10 * 60) {
+        currentSlot = "t1";
+      } else if (currentTimeInMinutes >= 12 * 60 && currentTimeInMinutes < 12 * 60 + 45) {
+        currentSlot = "t2";
+      } else if (currentTimeInMinutes >= 12 * 60 + 45 && currentTimeInMinutes < 13 * 60 + 30) {
+        currentSlot = "t3";
+      } else if (currentTimeInMinutes >= 13 * 60 + 30 && currentTimeInMinutes < 14 * 60 + 15) {
+        currentSlot = "t4";
+      } else if (currentTimeInMinutes >= 14 * 60 + 30 && currentTimeInMinutes < 16 * 60) {
+        currentSlot = "t5";
+      }
+
+      // --- Highlight current time slot and class cell ---
+      if (currentSlot && day >= 1 && day <= 6) {
+        const timeHeader = document.querySelector(`th[data-slot="${currentSlot}"]`);
+        const currentCell = document.querySelector(`td[data-day="${day}"][data-slot="${currentSlot}"]`);
+
+        if (timeHeader) {
+          timeHeader.classList.add(highlightTimeClass);
+        }
+        if (currentCell) {
+          currentCell.classList.add(highlightCellClass);
+        }
+      }
+    }
+
+    // Initial highlight when the page loads
+    highlightCurrentTime();
+
+    // Update every 15 seconds
+    setInterval(highlightCurrentTime, 15000);
+  </script>
+
+</body>
+
+</html>
+
+
